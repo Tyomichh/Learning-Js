@@ -214,16 +214,3 @@
 //     	console.log(j);
 //     }
 // }
-
-
-
-
-let variable = "lil bro";
-
-function printArrayElements(elm) {
-    for ( var i = 0;i < elm.length; i++ ) {
-    }
-    console.log(i);
-}
-
-printArrayElements(variable)
