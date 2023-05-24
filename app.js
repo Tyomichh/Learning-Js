@@ -298,17 +298,53 @@
 // Завдання:
 // c) Напишіть функцію, яка використовує async/await для послідовного виконання декількох асинхронних операцій та повертає результат останньої операції.
 // Рішення:
-async function whosPlaing() {    
-    const playstation = await fetch('https://api.sampleapis.com/playstation/games');
-    const pdata = await playstation.json()
-    const game = await fetch('https://api.sampleapis.com/baseball/hitsSingleSeason');
-    const gdata = await game.json()
-    console.log(pdata);
-    console.log(gdata);
-}
-whosPlaing()
+// async function whosPlaing() {    
+//     const playstation = await fetch('https://api.sampleapis.com/playstation/games');
+//     const pdata = await playstation.json()
+//     const game = await fetch('https://api.sampleapis.com/baseball/hitsSingleSeason');
+//     const gdata = await game.json()
+//     console.log(pdata);
+//     console.log(gdata);
+// }
+// whosPlaing()
 
 
-
-
-
+// Завдання:
+// a) Напишіть функцію, яка отримує список URL-адрес зображень, завантажує їх асинхронно за допомогою Promise.all, та повертає масив завантажених зображень.
+// Рішення:
+// const urlList = [
+//   {
+//     name: 'colorBum',
+//     URL: 'https://i.pinimg.com/originals/b8/b7/48/b8b748e00bcfdeed1a903fc3f1cc426d.jpg'
+//   },
+//   {
+//     name: 'Space',
+//     URL: 'https://wallpapers-fenix.eu/full/190722/235251765.jpg'
+//   },
+//   {
+//     name: 'Moon',
+//     URL: 'https://ukr.media/static/ba/aimg/4/1/4/414281_1.jpg'
+//   },
+//   {
+//     name: 'Jupiter',
+//     URL: 'https://www.nasa.gov/sites/default/files/thumbnails/image/pia2380-16x9.jpg'
+//   }
+// ];
+// function downloadImages(urls) {
+//   const createPromises = urls.map(url => {
+//     return new Promise((resolve, reject) => {
+//       const img = new Image();
+//       img.onload = () => resolve({ name: url.name, image: img });
+//       img.onerror = () => reject(new Error(`Не вдалося завантажити зображення: ${url.name}`));
+//       img.src = url.URL;
+//     });
+//   });
+//   return Promise.all(createPromises);
+// }
+// downloadImages(urlList)
+//   .then(images => {
+//     console.log('Зображення завантажено:', images);
+//   })
+//   .catch(error => {
+//     console.error('Помилка завантаження зображень:', error);
+//   });
